@@ -5,13 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-enum class ActionType{
+enum class ActionType {
     PLUS, MINUS
 }
 
 //x 데이터의 변경
 //x 뷰모델은 데이터의 변경사항을 알려주는 라이브 데이터를 가지고 있고
-class MainViewModel :ViewModel(){
+class MainViewModel : ViewModel() {
     //mutableLiveData - Editable
     //LiveData - not Editable
 
@@ -25,8 +25,8 @@ class MainViewModel :ViewModel(){
         _currentValue.value = 0
     }
 
-    fun updateValue(actionType: ActionType, input: Int){
-        when(actionType){
+    fun updateValue(actionType: ActionType, input: Int) {
+        when (actionType) {
             ActionType.PLUS -> _currentValue.value = _currentValue.value?.plus(input)
             ActionType.MINUS -> _currentValue.value = _currentValue.value?.minus(input)
         }
