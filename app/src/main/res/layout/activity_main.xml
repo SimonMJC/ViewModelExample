@@ -8,6 +8,9 @@
         <variable
             name="main"
             type="com.elephant.viewmodelexample.MainActivity"/>
+        <variable
+            name="viewModel"
+            type="com.elephant.viewmodelexample.MainViewModel"/>
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
